@@ -1,0 +1,93 @@
+body {
+  background: linear-gradient(135deg, #1e0c38, #3c1361);
+  background-size: 400% 400%;
+  animation: bgAnimation 10s ease infinite;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  padding: 30px;
+  color: #fff700;
+  margin: 0;
+}
+
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #ffd700;
+  text-shadow: 2px 2px #ff00ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.slot-machine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 40px auto;
+  flex-wrap: wrap;
+  max-width: 500px;
+}
+
+.slot {
+  width: 130px;
+  height: 130px;
+  background: radial-gradient(circle, #fff700 0%, #ff8800 100%);
+  border: 5px solid #ff0055;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ff0055, 0 0 40px #ff0055 inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.slot:hover {
+  transform: scale(1.1);
+}
+
+.face {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 12px;
+  border: 3px solid #fff;
+}
+
+button {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  border: none;
+  color: white;
+  padding: 15px 40px;
+  font-size: 1.5em;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #ff4b2b;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #ff4b2b;
+}
+
+#resultado {
+  font-size: 2em;
+  margin-top: 20px;
+  min-height: 2em;
+  color: #ffff00;
+  text-shadow: 1px 1px 4px #000000;
+  animation: aparecer 0.5s ease;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
